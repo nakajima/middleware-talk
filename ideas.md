@@ -1,7 +1,5 @@
 # The magical world of middleware
 
-
-
 ## What's middleware?
 
 ## Why middleware?
@@ -19,3 +17,4 @@ Adherence Leads to...
 Rack::MethodOverride
 Rack::Cache
 Rack::Flash
+Rack::Unbasic
