@@ -195,11 +195,11 @@
 
 !SLIDE
 
-## Rack::Dash
+## Rack::Cache
 
 !SLIDE
 
-## Rack::Cache
+## Rack::Dash
 
 !SLIDE
 
