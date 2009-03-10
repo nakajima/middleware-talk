@@ -5145,8 +5145,28 @@ extension, but closed for modification.</p></blockquote>
             </div>
           </div>
         
-          <div class="!SLIDE">
+          <div class="!SLIDE code">
             <div id="slide-39" class="content">
+              <h1>JavaScript &amp; Middleware</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code javascript">
+            <div id="slide-40" class="content">
+              <pre><span class="nx">on</span><span class="p">(</span><span class="s1">'form.submitted'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">disableSubmit</span><span class="o">,</span> <span class="s1">'form'</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flashFadeOut</span><span class="o">,</span> <span class="s1">'.flash'</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">'keyup'</span><span class="p">)</span> 
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">setTextStats</span><span class="o">,</span> <span class="s1">'textarea'</span><span class="p">);</span>
+</pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-41" class="content">
               <h1>Questions?</h1>
             </div>
           </div>

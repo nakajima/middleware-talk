@@ -70,22 +70,6 @@ ul {
   text-decoration: underline;
 }
 
-.notes {
-  color: white;
-  font-size: 14px;
-  margin-left: 1em;
-  text-align: center;
-  margin-top: 5em;
-}
-
-.notes li {
-  list-style-type: none;
-}
-
-.demo {
-  background: #fff;
-}
-
 /* - Ripped shamefully from GitHub - */
 .code  { background: #faffff; color: #221; }
 .code .c { color: #999988; font-style: italic } /* Comment */

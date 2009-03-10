@@ -193,6 +193,22 @@
 
 ## Rack::Unbasic
 
+!SLIDE code
+
+# JavaScript & Middleware
+
+!SLIDE code javascript
+
+<pre><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;form.submitted&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">disableSubmit</span><span class="o">,</span> <span class="s1">&#39;form&#39;</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flashFadeOut</span><span class="o">,</span> <span class="s1">&#39;.flash&#39;</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup&#39;</span><span class="p">)</span> 
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">setTextStats</span><span class="o">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">);</span>
+</pre>
+
 !SLIDE
 
 # Questions?
