@@ -183,6 +183,18 @@
 
 !SLIDE
 
+## Sinatra
+
+!SLIDE
+
+## Rack::Test
+
+!SLIDE
+
+## Rack::Dash
+
+!SLIDE
+
 ## Rack::Cache
 
 !SLIDE

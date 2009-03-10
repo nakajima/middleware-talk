@@ -1,4 +1,143 @@
-/*!
+<html>
+  <head>
+    <title>Slides</title>
+    <style type="text/css" media="screen">
+      * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 38px;
+  color: white;
+  background: #101010;
+}
+
+a {
+  padding: 4px;
+  color: #111;
+  background: #eee;
+  text-decoration: none;
+}
+
+pre, code {
+  font-family: Bitstream Vera Sans Mono;
+  font-size: 1em;
+}
+
+blockquote {
+  padding: 0 0 0 1em;
+  font-size: 1.4em;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+cite, cite a {
+  color: #222;
+  background: #111;
+}
+
+cite {
+  padding: 0 1em 0 0;
+  float: right;
+}
+
+ul {
+  padding: 0 0 0 1em;
+}
+
+#slides {
+  overflow: hidden;
+  text-align: left;
+}
+
+#track {
+  width: 1000000px;
+  overflow: hidden;
+}
+
+#track > div {
+  float: left;
+  overflow: hidden;
+}
+
+#track > div .content {
+  margin: 0 0.6em;
+}
+
+#track > div .content h1 {
+  margin-bottom: 0.1em;
+}
+
+#track > div .content h1 strong {
+  text-decoration: underline;
+}
+
+/* - Ripped shamefully from GitHub - */
+.code  { background: #faffff; color: #221; }
+.code .c { color: #999988; font-style: italic } /* Comment */
+.code .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.code .k { font-weight: bold } /* Keyword */
+.code .o { font-weight: bold } /* Operator */
+.code .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.code .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.code .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.code .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.code .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.code .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.code .ge { font-style: italic } /* Generic.Emph */
+.code .gr { color: #aa0000 } /* Generic.Error */
+.code .gh { color: #999999 } /* Generic.Heading */
+.code .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.code .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.code .go { color: #888888 } /* Generic.Output */
+.code .gp { color: #555555 } /* Generic.Prompt */
+.code .gs { font-weight: bold } /* Generic.Strong */
+.code .gu { color: #aaaaaa } /* Generic.Subheading */
+.code .gt { color: #aa0000 } /* Generic.Traceback */
+.code .kc { font-weight: bold } /* Keyword.Constant */
+.code .kd { font-weight: bold } /* Keyword.Declaration */
+.code .kp { font-weight: bold } /* Keyword.Pseudo */
+.code .kr { font-weight: bold } /* Keyword.Reserved */
+.code .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.code .m { color: #009999 } /* Literal.Number */
+.code .s { color: #d14 } /* Literal.String */
+.code .na { color: #008080 } /* Name.Attribute */
+.code .nb { color: #0086B3 } /* Name.Builtin */
+.code .nc { color: #445588; font-weight: bold } /* Name.Class */
+.code .no { color: #008080 } /* Name.Constant */
+.code .ni { color: #800080 } /* Name.Entity */
+.code .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.code .nf { color: #990000; font-weight: bold } /* Name.Function */
+.code .nn { color: #555555 } /* Name.Namespace */
+.code .nt { color: #000080 } /* Name.Tag */
+.code .nv { color: #008080 } /* Name.Variable */
+.code .ow { font-weight: bold } /* Operator.Word */
+.code .w { color: #bbbbbb } /* Text.Whitespace */
+.code .mf { color: #009999 } /* Literal.Number.Float */
+.code .mh { color: #009999 } /* Literal.Number.Hex */
+.code .mi { color: #009999 } /* Literal.Number.Integer */
+.code .mo { color: #009999 } /* Literal.Number.Oct */
+.code .sb { color: #d14 } /* Literal.String.Backtick */
+.code .sc { color: #d14 } /* Literal.String.Char */
+.code .sd { color: #d14 } /* Literal.String.Doc */
+.code .s2 { color: #d14 } /* Literal.String.Double */
+.code .se { color: #d14 } /* Literal.String.Escape */
+.code .sh { color: #d14 } /* Literal.String.Heredoc */
+.code .si { color: #d14 } /* Literal.String.Interpol */
+.code .sx { color: #d14 } /* Literal.String.Other */
+.code .sr { color: #009926 } /* Literal.String.Regex */
+.code .s1 { color: #d14 } /* Literal.String.Single */
+.code .ss { color: #990073 } /* Literal.String.Symbol */
+.code .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.code .vc { color: #008080 } /* Name.Variable.Class */
+.code .vg { color: #008080 } /* Name.Variable.Global */
+.code .vi { color: #008080 } /* Name.Variable.Instance */
+.code .il { color: #009999 } /* Literal.Number.Integer.Long */
+    </style>
+    <script type="text/javascript">
+      /*!
  * jQuery JavaScript Library v1.3.2
  * http://jquery.com/
  *
@@ -4374,3 +4513,655 @@ jQuery.each([ "Height", "Width" ], function(i, name){
 
 });
 })();
+
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      /*
+ * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+ *
+ * Uses the built in easing capabilities added In jQuery 1.1
+ * to offer multiple easing options
+ *
+ * TERMS OF USE - jQuery Easing
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright Â© 2008 George McGinley Smith
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+*/
+
+// t: current time, b: begInnIng value, c: change In value, d: duration
+jQuery.easing['jswing'] = jQuery.easing['swing'];
+
+jQuery.extend( jQuery.easing,
+{
+	def: 'easeOutQuad',
+	swing: function (x, t, b, c, d) {
+		//alert(jQuery.easing.default);
+		return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+	},
+	easeInQuad: function (x, t, b, c, d) {
+		return c*(t/=d)*t + b;
+	},
+	easeOutQuad: function (x, t, b, c, d) {
+		return -c *(t/=d)*(t-2) + b;
+	},
+	easeInOutQuad: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t + b;
+		return -c/2 * ((--t)*(t-2) - 1) + b;
+	},
+	easeInCubic: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t + b;
+	},
+	easeOutCubic: function (x, t, b, c, d) {
+		return c*((t=t/d-1)*t*t + 1) + b;
+	},
+	easeInOutCubic: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t + b;
+		return c/2*((t-=2)*t*t + 2) + b;
+	},
+	easeInQuart: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t*t + b;
+	},
+	easeOutQuart: function (x, t, b, c, d) {
+		return -c * ((t=t/d-1)*t*t*t - 1) + b;
+	},
+	easeInOutQuart: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+		return -c/2 * ((t-=2)*t*t*t - 2) + b;
+	},
+	easeInQuint: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t*t*t + b;
+	},
+	easeOutQuint: function (x, t, b, c, d) {
+		return c*((t=t/d-1)*t*t*t*t + 1) + b;
+	},
+	easeInOutQuint: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+		return c/2*((t-=2)*t*t*t*t + 2) + b;
+	},
+	easeInSine: function (x, t, b, c, d) {
+		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+	},
+	easeOutSine: function (x, t, b, c, d) {
+		return c * Math.sin(t/d * (Math.PI/2)) + b;
+	},
+	easeInOutSine: function (x, t, b, c, d) {
+		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+	},
+	easeInExpo: function (x, t, b, c, d) {
+		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+	},
+	easeOutExpo: function (x, t, b, c, d) {
+		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+	},
+	easeInOutExpo: function (x, t, b, c, d) {
+		if (t==0) return b;
+		if (t==d) return b+c;
+		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+	},
+	easeInCirc: function (x, t, b, c, d) {
+		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+	},
+	easeOutCirc: function (x, t, b, c, d) {
+		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+	},
+	easeInOutCirc: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+	},
+	easeInElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+	},
+	easeOutElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+	},
+	easeInOutElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+		return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+	},
+	easeInBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158;
+		return c*(t/=d)*t*((s+1)*t - s) + b;
+	},
+	easeOutBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158;
+		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+	},
+	easeInOutBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158; 
+		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+	},
+	easeInBounce: function (x, t, b, c, d) {
+		return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
+	},
+	easeOutBounce: function (x, t, b, c, d) {
+		if ((t/=d) < (1/2.75)) {
+			return c*(7.5625*t*t) + b;
+		} else if (t < (2/2.75)) {
+			return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+		} else if (t < (2.5/2.75)) {
+			return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+		} else {
+			return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+		}
+	},
+	easeInOutBounce: function (x, t, b, c, d) {
+		if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
+		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
+	}
+});
+
+/*
+ *
+ * TERMS OF USE - EASING EQUATIONS
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright Â© 2001 Robert Penner
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+ */
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      (function($) {
+  var currentHash = document.location.hash;
+  
+  var checkHash = function checkAgain() {
+    var newHash = document.location.hash;
+    if (currentHash != newHash) {
+      currentHash = newHash;
+      $(document).trigger('hash.changed');
+    }
+    window.setTimeout(checkAgain, 10);
+  }
+
+  checkHash();
+})(jQuery);
+
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      (function($) {
+  jQuery.easing.def = "easeOutQuart"; // For tweening
+
+  var allSlides = function() {
+    return $('#slides #track > div');
+  }
+  
+  var slideDimensions = function() {
+    return {
+      width: $(window).width(),
+      height: $(window).height()
+    }
+  }
+  
+  var getIndex = function() {
+    var index = document.location.hash.split('#')[1];
+    return Number(index);
+  }
+  
+  var setIndex = function(idx) {
+    var newSlide = '#slide-' + idx;
+    if ($(newSlide).size() < 1) { return false; }
+    document.location.hash = '#' + idx;
+  }
+  
+  var setSlideDimensions = function() {
+    var dimensions = slideDimensions();
+    
+    $('#slides').height(dimensions.height);
+    $('#slides').width(dimensions.width);
+    
+    allSlides().height(dimensions.height);
+    allSlides().width(dimensions.width);
+  }
+  
+  var showCurrentSlide = function() {
+    var dimensions = slideDimensions();
+    var index = getIndex();
+    var offset = (index || 0) * dimensions.width;
+    
+    $('#track').animate({ marginLeft: '-' + offset + 'px' }, 200);
+  }
+  
+  var verticalAlign = function() {
+    var dimensions = slideDimensions();
+    var margin = (dimensions.height - $(this).height()) / 2;
+    $(this).css({ paddingTop: margin + 'px' });
+  }
+
+  var formatGist = function() {
+    $('.gist-meta').css({ fontSize: '12px' });
+    $('.gist .gist-file .gist-data pre').css({
+      padding: '0.4em',
+      overflow: 'hidden',
+      fontSize: '26px'
+    });
+    
+    allSlides().find('.content').each(verticalAlign);
+  }
+  
+  var adjustSlides = function() {
+    var dimensions = slideDimensions();
+    
+    setSlideDimensions();
+    showCurrentSlide();
+
+    formatGist();
+  }
+  
+  var move = function(event) {
+    var DIRECTIONS = {
+      37: -1, // ARROW LEFT
+      39: 1,  // ARROW RIGHT
+      32: 1,  // SPACE BAR
+      13: 1   // RETURN
+    }
+    
+    if (dir = DIRECTIONS[event.which]) {
+      setIndex(getIndex() + dir);
+    }
+  }
+  
+  $(window).bind('resize', function() { adjustSlides(); });
+  $(document).bind('keydown', move);
+  $(document).bind('hash.changed', adjustSlides);
+  $(document).ready(function() {
+    setIndex(getIndex() || 0);
+    $(this).trigger('hash.changed');
+    if (document.location.search.indexOf('notes') == 1) {
+      $('.notes').show();
+    }
+  });
+})(jQuery);
+    </script>
+  </head>
+  <body>
+    <div id="slides">
+      <div id="track">
+        
+          <div class="!SLIDE">
+            <div id="slide-0" class="content">
+              <h1>The magical world of middleware</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-1" class="content">
+              <h1>What's Rack?</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-2" class="content">
+              <pre><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="o">[</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/html'</span><span class="p">},</span>
+    <span class="s1">'Welcome to the party.'</span>
+  <span class="o">]</span>
+<span class="p">}</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-3" class="content">
+              <pre><div class="highlight"><pre><span class="no">Rack</span><span class="o">::</span><span class="no">Handler</span><span class="o">::</span><span class="no">Mongrel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-4" class="content">
+              <h1>Rack Middleware</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-5" class="content">
+              <pre><div class="highlight"><pre><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Auth</span><span class="o">::</span><span class="no">Basic</span> <span class="k">do</span> <span class="o">|*</span><span class="n">credentials</span><span class="o">|</span>
+  <span class="n">credentials</span> <span class="o">==</span> <span class="o">[</span><span class="s1">'admin'</span><span class="p">,</span> <span class="s1">'sekret'</span><span class="o">]</span>
+<span class="k">end</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-6" class="content">
+              <pre><div class="highlight"><pre><span class="k">class</span> <span class="nc">PathLinker</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+    <span class="vi">@app</span> <span class="o">=</span> <span class="n">app</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code
+  ">
+            <div id="slide-7" class="content">
+              <pre><div class="highlight"><pre><span class="k">class</span> <span class="nc">PathLinker</span>
+  <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+    <span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">env</span><span class="p">)</span><span class="o">.</span><span class="n">url</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">to_s</span>
+    <span class="n">body</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">%r|/(\w+)|</span><span class="p">,</span>
+      <span class="s1">'&lt;a href="%s\1"&gt;\1&lt;/a&gt;'</span> <span class="o">%</span> <span class="n">url</span>
+    <span class="o">[</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code
+    ">
+            <div id="slide-8" class="content">
+              <pre><div class="highlight"><pre><span class="c1"># The three element tuple</span>
+<span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-9" class="content">
+              <pre><div class="highlight"><pre><span class="c1"># Rack::Request gives you useful stuff</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">env</span><span class="p">)</span><span class="o">.</span><span class="n">url</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-10" class="content">
+              <pre><div class="highlight"><pre><span class="c1"># The body can be either a string or an array</span>
+<span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">to_s</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-11" class="content">
+              <pre><div class="highlight"><pre><span class="c1"># Replacing paths with links to paths</span>
+<span class="n">body</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">%r|/(\w+)|</span><span class="p">,</span> <span class="s1">'&lt;a href="%s\1"&gt;\1&lt;/a&gt;'</span> <span class="o">%</span> <span class="n">url</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-12" class="content">
+              <pre><div class="highlight"><pre><span class="c1"># Returning the new response</span>
+<span class="o">[</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="o">]</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-13" class="content">
+              <h1>DEMO</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE demo">
+            <div id="slide-14" class="content">
+              <h1><a href="http://localhost:1234">Simplest App</a></h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE demo">
+            <div id="slide-15" class="content">
+              <h1><a href="http://localhost:1235">Authorization Middleware</a></h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE demo">
+            <div id="slide-16" class="content">
+              <h1><a href="http://localhost:1236">Custom Path Link Middleware</a></h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-17" class="content">
+              <h1>Middleware: A Definition</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-18" class="content">
+              <blockquote><p>Middleware is software enterprise application integration.</p></blockquote>
+<p><cite>- <a href="http://en.wikipedia.org/wiki/Middleware">Wikipedia</a></cite></p>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-19" class="content">
+              <h1>But seriously folks...</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE definition">
+            <div id="slide-20" class="content">
+              <blockquote><p>Middleware is an architecture-level application of the "compose method"
+pattern.</p></blockquote>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-21" class="content">
+              <h2>Compose Method</h2>
+<ul>
+<li>Improves Communication</li>
+<li>Reduces Duplication</li>
+<li>More Expressive Code</li>
+</ul>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-22" class="content">
+              <h1>Example:</h1>
+<h3>Web Framework Boilerplate</h3>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-23" class="content">
+              <h2>As a method</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-24" class="content">
+              <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">respond_to_request</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">reload_if_development</span>
+  <span class="n">parse_nested_params</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">handle_http_verb_override</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">parse_cookies_for_session</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="c1"># Whatever else web frameworks do</span>
+<span class="k">end</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-25" class="content">
+              <h2>As Rack middleware</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-26" class="content">
+              <pre><div class="highlight"><pre><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Reloader</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">NestedParams</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">MethodOverride</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Session</span><span class="o">::</span><span class="no">Cookie</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-27" class="content">
+              <h1>Rack encourages good design</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-28" class="content">
+              <h2>Single Responsibility Principle</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-29" class="content">
+              <blockquote><p>Software entities (classes, modules functions, etc.) should be open for
+extension, but closed for modification.</p></blockquote>
+            </div>
+          </div>
+        
+          <div class="!SLIDE definition">
+            <div id="slide-30" class="content">
+              <h2>Open-Closed Principle</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-31" class="content">
+              <blockquote><p>There should never be more than one reason for a class to change.</p></blockquote>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-32" class="content">
+              <h1>Rack encourages re-use</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-33" class="content">
+              <h2>Rack::NestedParams</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-34" class="content">
+              <h2>Rack::MethodOverride</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-35" class="content">
+              <h1>Rack encourages cool stuff</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-36" class="content">
+              <h2>Rack::Test</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-37" class="content">
+              <h2>Rack::Cache</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-38" class="content">
+              <h2>Rack::ESI</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-39" class="content">
+              <h2>Rack::Unbasic</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-40" class="content">
+              <h1>JavaScript &amp; Middleware</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code javascript">
+            <div id="slide-41" class="content">
+              <pre><span class="nx">on</span><span class="p">(</span><span class="s1">'form.submitted'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">disableSubmit</span><span class="o">,</span> <span class="s1">'form'</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flashFadeOut</span><span class="o">,</span> <span class="s1">'.flash'</span><span class="p">);</span>
+
+<span class="nx">on</span><span class="p">(</span><span class="s1">'keyup'</span><span class="p">)</span> 
+  <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">setTextStats</span><span class="o">,</span> <span class="s1">'textarea'</span><span class="p">);</span>
+</pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-42" class="content">
+              <h1>Questions?</h1>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
