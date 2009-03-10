@@ -195,11 +195,15 @@
 
 !SLIDE
 
+## Rack::ESI
+
+!SLIDE
+
 ## Rack::Cache
 
 !SLIDE
 
-## Rack::ESI
+## Rack::Flash
 
 !SLIDE
 
