@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'albino'
+require 'lib/albino'
 require 'nokogiri'
 require 'rdiscount'
 require 'erb'
@@ -26,6 +26,6 @@ end
     doc.at('body').children.to_s rescue doc.to_s
   end
 
-template = File.read(File.dirname(__FILE__) + '/template.erb')
+template = File.read(File.dirname(__FILE__) + '/lib/template.erb')
 
 puts ERB.new(template).result(binding)

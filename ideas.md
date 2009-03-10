@@ -27,97 +27,6 @@
       credentials == ['admin', 'sekret']
     end
 
-!SLIDE
-
-# How it works
-
-!SLIDE code
-
-    class AnyMiddleware
-      def initialize(app)
-        @app = app
-      end
-      
-      def call(env)
-        status, headers, body = @app.call(env)
-      end
-    end
-
-!SLIDE
-
-# Middleware is part of pipeline
-
-!SLIDE code
-
-    use AnyMiddleware
-
-!SLIDE
-
-# Middleware is called with `env`
-
-!SLIDE
-
-# Middleware performs pre-request actions (possibly)
-
-!SLIDE code
-
-    def call(env)
-      env['any.middleware'] = 'Hello!'
-      # other processing...
-    end
-    
-!SLIDE
-
-# Middleware either:
-
-!SLIDE
-
-## a) Returns a three element tuple to server handler. (DONE)
-
-!SLIDE code
-
-    def call(env)
-      [200, { 'Content-Type' => 'text/plain' },
-        "Sorry, that's as far as you go today."
-      ]
-    end
-
-!SLIDE
-
-## b) Calls its `@app`
-
-!SLIDE code
-
-    def call(env)
-      @app.call(env)
-    end
-
-!SLIDE
-
-# Middleware's app call returns three element tuple
-
-!SLIDE code
-
-    [302, { 'Location' => '/' },
-      'You are being redirected'
-    ]
-
-!SLIDE
-
-# Middleware performs post-request actions (possibly)
-
-!SLIDE code
-
-    def call(env)
-      res = @app.call(env)
-      cache(res) # caches or something
-      res
-    end
-
-!SLIDE
-
-# Write your own middleware
-
 !SLIDE code
 
     class PathLinker
@@ -237,32 +146,52 @@
 
 !SLIDE
 
-# Principles
+# Rack encourages good design
 
 !SLIDE
-# Single Responsibility Principle
+
+## Single Responsibility Principle
 
 !SLIDE
+
 > Software entities (classes, modules functions, etc.) should be open for
 > extension, but closed for modification.
 
-!SLIDE
-# Open-Closed Principle
+!SLIDE definition
+
+## Open-Closed Principle
 
 !SLIDE
 
 > There should never be more than one reason for a class to change.
 
 !SLIDE
-# Examples of Rack Middleware
 
-!SLIDE code
+# Rack encourages re-use
 
-    Rack::MethodOverride
-    Rack::Cache
-    Rack::ESI
-    Rack::Flash
-    Rack::Unbasic
+!SLIDE
+
+## Rack::NestedParams
+
+!SLIDE
+
+## Rack::MethodOverride
+
+!SLIDE
+
+# Rack encourages cool stuff
+
+!SLIDE
+
+## Rack::Cache
+
+!SLIDE
+
+## Rack::ESI
+
+!SLIDE
+
+## Rack::Unbasic
 
 !SLIDE
 
