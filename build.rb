@@ -23,7 +23,7 @@ end
       snippet.replace(node)
     end
     
-    doc.at('body').children.to_s
+    doc.at('body').children.to_s rescue doc.to_s
   end
 
 template = File.read(File.dirname(__FILE__) + '/template.erb')

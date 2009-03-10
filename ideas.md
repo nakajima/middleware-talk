@@ -2,6 +2,7 @@
 # The magical world of middleware
 
 !SLIDE
+
 # What's Rack?
 
 !SLIDE code
@@ -17,65 +18,14 @@
     Rack::Handler::Mongrel.run(app)
 
 !SLIDE
-# What's Middleware
+
+# Rack Middleware
 
 !SLIDE code
 
     use Rack::Auth::Basic do |*credentials|
       credentials == ['admin', 'sekret']
     end
-
-!SLIDE
-# Definition:
-
-!SLIDE
-
-> Middleware is software enterprise application integration.
-
-<cite>- [Wikipedia](http://en.wikipedia.org/wiki/Middleware)</cite>
-
-!SLIDE
-# But seriously folks...
-
-!SLIDE definition
-
-> Middleware is an architecture-level application of the "compose method"
-> pattern.
-
-!SLIDE
-## Compose Method
-
-* Improves Communication
-* Reduces Duplication
-* More Expressive Code
-
-!SLIDE
-# Example
-
-## Web Framework Boilerplate
-
-!SLIDE
-## As a method
-
-!SLIDE code
-
-    def respond_to_request(env)
-      reload_if_development
-      parse_nested_params(env)
-      handle_http_verb_override(env)
-      parse_cookies_for_session(env)
-      # Whatever else web frameworks do
-    end
-
-!SLIDE
-## As Rack middleware
-
-!SLIDE code
-
-    use Rack::Reloader
-    use Rack::NestedParams
-    use Rack::MethodOverride
-    use Rack::Session::Cookie
 
 !SLIDE
 
@@ -232,6 +182,61 @@
 
 !SLIDE
 
+# Middleware: A Definition
+
+!SLIDE
+
+> Middleware is software enterprise application integration.
+
+<cite>- [Wikipedia](http://en.wikipedia.org/wiki/Middleware)</cite>
+
+!SLIDE
+# But seriously folks...
+
+!SLIDE definition
+
+> Middleware is an architecture-level application of the "compose method"
+> pattern.
+
+!SLIDE
+## Compose Method
+
+* Improves Communication
+* Reduces Duplication
+* More Expressive Code
+
+!SLIDE
+
+# Example:
+
+### Web Framework Boilerplate
+
+!SLIDE
+
+## As a method
+
+!SLIDE code
+
+    def respond_to_request(env)
+      reload_if_development
+      parse_nested_params(env)
+      handle_http_verb_override(env)
+      parse_cookies_for_session(env)
+      # Whatever else web frameworks do
+    end
+
+!SLIDE
+## As Rack middleware
+
+!SLIDE code
+
+    use Rack::Reloader
+    use Rack::NestedParams
+    use Rack::MethodOverride
+    use Rack::Session::Cookie
+
+!SLIDE
+
 # Principles
 
 !SLIDE
@@ -259,6 +264,6 @@
     Rack::Flash
     Rack::Unbasic
 
-!SLIDE code
+!SLIDE
 
 # Questions?

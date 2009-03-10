@@ -4887,7 +4887,7 @@ jQuery.extend( jQuery.easing,
         
           <div class="!SLIDE">
             <div id="slide-4" class="content">
-              <h1>What's Middleware</h1>
+              <h1>Rack Middleware</h1>
             </div>
           </div>
         
@@ -4902,91 +4902,12 @@ jQuery.extend( jQuery.easing,
         
           <div class="!SLIDE">
             <div id="slide-6" class="content">
-              <h1>Definition:</h1>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-7" class="content">
-              <blockquote><p>Middleware is software enterprise application integration.</p></blockquote>
-<p><cite>- <a href="http://en.wikipedia.org/wiki/Middleware">Wikipedia</a></cite></p>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-8" class="content">
-              <h1>But seriously folks...</h1>
-            </div>
-          </div>
-        
-          <div class="!SLIDE definition">
-            <div id="slide-9" class="content">
-              <blockquote><p>Middleware is an architecture-level application of the "compose method"
-pattern.</p></blockquote>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-10" class="content">
-              <h2>Compose Method</h2>
-<ul>
-<li>Improves Communication</li>
-<li>Reduces Duplication</li>
-<li>More Expressive Code</li>
-</ul>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-11" class="content">
-              <h1>Example</h1>
-<h2>Web Framework Boilerplate</h2>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-12" class="content">
-              <h2>As a method</h2>
-            </div>
-          </div>
-        
-          <div class="!SLIDE code">
-            <div id="slide-13" class="content">
-              <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">respond_to_request</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-  <span class="n">reload_if_development</span>
-  <span class="n">parse_nested_params</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-  <span class="n">handle_http_verb_override</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-  <span class="n">parse_cookies_for_session</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-  <span class="c1"># Whatever else web frameworks do</span>
-<span class="k">end</span>
-</pre></div></pre>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-14" class="content">
-              <h2>As Rack middleware</h2>
-            </div>
-          </div>
-        
-          <div class="!SLIDE code">
-            <div id="slide-15" class="content">
-              <pre><div class="highlight"><pre><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Reloader</span>
-<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">NestedParams</span>
-<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">MethodOverride</span>
-<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Session</span><span class="o">::</span><span class="no">Cookie</span>
-</pre></div></pre>
-            </div>
-          </div>
-        
-          <div class="!SLIDE">
-            <div id="slide-16" class="content">
               <h1>How it works</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-17" class="content">
+            <div id="slide-7" class="content">
               <pre><div class="highlight"><pre><span class="k">class</span> <span class="nc">AnyMiddleware</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
     <span class="vi">@app</span> <span class="o">=</span> <span class="n">app</span>
@@ -5001,33 +4922,33 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-18" class="content">
+            <div id="slide-8" class="content">
               <h1>Middleware is part of pipeline</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-19" class="content">
+            <div id="slide-9" class="content">
               <pre><div class="highlight"><pre><span class="n">use</span> <span class="no">AnyMiddleware</span>
 </pre></div></pre>
             </div>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-20" class="content">
+            <div id="slide-10" class="content">
               <h1>Middleware is called with <code>env</code>
 </h1>
             </div>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-21" class="content">
+            <div id="slide-11" class="content">
               <h1>Middleware performs pre-request actions (possibly)</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-22" class="content">
+            <div id="slide-12" class="content">
               <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
   <span class="n">env</span><span class="o">[</span><span class="s1">'any.middleware'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'Hello!'</span>
   <span class="c1"># other processing...</span>
@@ -5037,19 +4958,19 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-23" class="content">
+            <div id="slide-13" class="content">
               <h1>Middleware either:</h1>
             </div>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-24" class="content">
+            <div id="slide-14" class="content">
               <h2>a) Returns a three element tuple to server handler. (DONE)</h2>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-25" class="content">
+            <div id="slide-15" class="content">
               <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
   <span class="o">[</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/plain'</span> <span class="p">},</span>
     <span class="s2">"Sorry, that's as far as you go today."</span>
@@ -5060,14 +4981,14 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-26" class="content">
+            <div id="slide-16" class="content">
               <h2>b) Calls its <code>@app</code>
 </h2>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-27" class="content">
+            <div id="slide-17" class="content">
               <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
   <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
 <span class="k">end</span>
@@ -5076,13 +4997,13 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-28" class="content">
+            <div id="slide-18" class="content">
               <h1>Middleware's app call returns three element tuple</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-29" class="content">
+            <div id="slide-19" class="content">
               <pre><div class="highlight"><pre><span class="o">[</span><span class="mi">302</span><span class="p">,</span> <span class="p">{</span> <span class="s1">'Location'</span> <span class="o">=&gt;</span> <span class="s1">'/'</span> <span class="p">},</span>
   <span class="s1">'You are being redirected'</span>
 <span class="o">]</span>
@@ -5091,13 +5012,13 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-30" class="content">
+            <div id="slide-20" class="content">
               <h1>Middleware performs post-request actions (possibly)</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-31" class="content">
+            <div id="slide-21" class="content">
               <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
   <span class="n">res</span> <span class="o">=</span> <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
   <span class="n">cache</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1"># caches or something</span>
@@ -5108,13 +5029,13 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-32" class="content">
+            <div id="slide-22" class="content">
               <h1>Write your own middleware</h1>
             </div>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-33" class="content">
+            <div id="slide-23" class="content">
               <pre><div class="highlight"><pre><span class="k">class</span> <span class="nc">PathLinker</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
     <span class="vi">@app</span> <span class="o">=</span> <span class="n">app</span>
@@ -5126,7 +5047,7 @@ pattern.</p></blockquote>
         
           <div class="!SLIDE code
   ">
-            <div id="slide-34" class="content">
+            <div id="slide-24" class="content">
               <pre><div class="highlight"><pre><span class="k">class</span> <span class="nc">PathLinker</span>
   <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
     <span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
@@ -5143,7 +5064,7 @@ pattern.</p></blockquote>
         
           <div class="!SLIDE code
     ">
-            <div id="slide-35" class="content">
+            <div id="slide-25" class="content">
               <pre><div class="highlight"><pre><span class="c1"># The three element tuple</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="vi">@app</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
 </pre></div></pre>
@@ -5151,7 +5072,7 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-36" class="content">
+            <div id="slide-26" class="content">
               <pre><div class="highlight"><pre><span class="c1"># Rack::Request gives you useful stuff</span>
 <span class="n">url</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">env</span><span class="p">)</span><span class="o">.</span><span class="n">url</span>
 </pre></div></pre>
@@ -5159,7 +5080,7 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-37" class="content">
+            <div id="slide-27" class="content">
               <pre><div class="highlight"><pre><span class="c1"># The body can be either a string or an array</span>
 <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">to_s</span>
 </pre></div></pre>
@@ -5167,7 +5088,7 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-38" class="content">
+            <div id="slide-28" class="content">
               <pre><div class="highlight"><pre><span class="c1"># Replacing paths with links to paths</span>
 <span class="n">body</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">%r|/(\w+)|</span><span class="p">,</span> <span class="s1">'&lt;a href="%s\1"&gt;\1&lt;/a&gt;'</span> <span class="o">%</span> <span class="n">url</span>
 </pre></div></pre>
@@ -5175,7 +5096,7 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE code">
-            <div id="slide-39" class="content">
+            <div id="slide-29" class="content">
               <pre><div class="highlight"><pre><span class="c1"># Returning the new response</span>
 <span class="o">[</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="o">]</span>
 </pre></div></pre>
@@ -5183,26 +5104,105 @@ pattern.</p></blockquote>
           </div>
         
           <div class="!SLIDE">
-            <div id="slide-40" class="content">
+            <div id="slide-30" class="content">
               <h1>DEMO</h1>
             </div>
           </div>
         
           <div class="!SLIDE demo">
-            <div id="slide-41" class="content">
+            <div id="slide-31" class="content">
               <h1><a href="http://localhost:1234">Simplest App</a></h1>
             </div>
           </div>
         
           <div class="!SLIDE demo">
-            <div id="slide-42" class="content">
+            <div id="slide-32" class="content">
               <h1><a href="http://localhost:1235">Authorization Middleware</a></h1>
             </div>
           </div>
         
           <div class="!SLIDE demo">
-            <div id="slide-43" class="content">
+            <div id="slide-33" class="content">
               <h1><a href="http://localhost:1236">Custom Path Link Middleware</a></h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-34" class="content">
+              <h1>Middleware: A Definition</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-35" class="content">
+              <blockquote><p>Middleware is software enterprise application integration.</p></blockquote>
+<p><cite>- <a href="http://en.wikipedia.org/wiki/Middleware">Wikipedia</a></cite></p>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-36" class="content">
+              <h1>But seriously folks...</h1>
+            </div>
+          </div>
+        
+          <div class="!SLIDE definition">
+            <div id="slide-37" class="content">
+              <blockquote><p>Middleware is an architecture-level application of the "compose method"
+pattern.</p></blockquote>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-38" class="content">
+              <h2>Compose Method</h2>
+<ul>
+<li>Improves Communication</li>
+<li>Reduces Duplication</li>
+<li>More Expressive Code</li>
+</ul>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-39" class="content">
+              <h1>Example:</h1>
+<h3>Web Framework Boilerplate</h3>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-40" class="content">
+              <h2>As a method</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-41" class="content">
+              <pre><div class="highlight"><pre><span class="k">def</span> <span class="nf">respond_to_request</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">reload_if_development</span>
+  <span class="n">parse_nested_params</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">handle_http_verb_override</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="n">parse_cookies_for_session</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+  <span class="c1"># Whatever else web frameworks do</span>
+<span class="k">end</span>
+</pre></div></pre>
+            </div>
+          </div>
+        
+          <div class="!SLIDE">
+            <div id="slide-42" class="content">
+              <h2>As Rack middleware</h2>
+            </div>
+          </div>
+        
+          <div class="!SLIDE code">
+            <div id="slide-43" class="content">
+              <pre><div class="highlight"><pre><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Reloader</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">NestedParams</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">MethodOverride</span>
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Session</span><span class="o">::</span><span class="no">Cookie</span>
+</pre></div></pre>
             </div>
           </div>
         
@@ -5254,7 +5254,7 @@ extension, but closed for modification.</p></blockquote>
             </div>
           </div>
         
-          <div class="!SLIDE code">
+          <div class="!SLIDE">
             <div id="slide-51" class="content">
               <h1>Questions?</h1>
             </div>
