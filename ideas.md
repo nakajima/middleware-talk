@@ -191,11 +191,11 @@
 
 !SLIDE
 
-## Rack::Dash
+## Rack::ESI
 
 !SLIDE
 
-## Rack::ESI
+## Rack::Dash
 
 !SLIDE
 
