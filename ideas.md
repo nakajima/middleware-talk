@@ -1,6 +1,13 @@
 !SLIDE info
 # The magical world of middleware
 
+!SLIDE
+
+# Follow along with this talk:
+
+### [talk.heroku.com/slides.html](http://talk.heroku.com/slides.html)
+### [github.com/nakajima/middleware-talk](https://github.com/nakajima/middleware-talk/tree/master)
+
 !SLIDE info
 
 # Pat Nakajima
