@@ -17,3 +17,7 @@ a {
   color: #00f;
   background: transparent;
 }
+
+pre {
+  font-family: Bitstream Vera Sans Mono, Monaco, monospace;
+}
