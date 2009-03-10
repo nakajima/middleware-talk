@@ -183,6 +183,32 @@
 
 !SLIDE
 
+# "Awesome Middleware"
+
+!SLIDE
+
+# Built-in to Rack
+
+!SLIDE
+
+## Rack::CommonLogger
+
+!SLIDE
+
+## Rack::Lint
+
+!SLIDE
+
+## Rack::ShowExceptions
+
+!SLIDE
+
+### Rack::Request
+### Rack::Response
+### Rack::Utils
+
+!SLIDE
+
 # Rack encourages re-use
 
 !SLIDE
@@ -240,6 +266,13 @@
 <span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup&#39;</span><span class="p">)</span> 
   <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">setTextStats</span><span class="o">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">);</span>
 </pre>
+
+!SLIDE
+
+## Links
+
+### [The Rack Spec](http://rack.rubyforge.org)
+### [Introducing Rack](http://chneukirchen.org/talks/euruko-2007/neukirchen07introducingrack.pdf)
 
 !SLIDE
 
