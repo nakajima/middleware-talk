@@ -1,5 +1,21 @@
-!SLIDE
+!SLIDE info
 # The magical world of middleware
+
+!SLIDE info
+
+# Pat Nakajima
+
+!SLIDE info
+
+# patnakajima.com
+
+!SLIDE info
+
+# github.com/nakajima
+
+!SLIDE info
+
+## acts_as_fu aintablog alias_alias_alias aspectory capinatra dash-ci dash-sinatra dot-rot elementor fixjour jj method-watcher nest-unit rack-cache rack-dash rack-flash rack-test rack-unbasic rebound roleful scaffhole screw-driver semi-formal sinatras-hat slidedown syntaxily talkerton
 
 !SLIDE
 
