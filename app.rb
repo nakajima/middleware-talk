@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra/base'
 
+# For deploying to Heroku
 class Talk < Sinatra::Base
 
   set :root, File.dirname(__FILE__)
