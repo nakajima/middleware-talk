@@ -173,7 +173,7 @@
 
 !SLIDE
 
-## Single Responsibility Principle
+## Open-Closed Principle
 
 !SLIDE
 
@@ -182,7 +182,7 @@
 
 !SLIDE definition
 
-## Open-Closed Principle
+## Single Responsibility Principle
 
 !SLIDE
 
